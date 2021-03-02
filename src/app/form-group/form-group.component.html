@@ -1,0 +1,28 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">UserName</span>
+        <input [formControl]="username" type="text" class="size1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+
+    </div>
+    <div [hidden]="username.valid|| username.untouched">
+        <div>Disable!!!</div>
+        <div [hidden]="!username.hasError('minlength')">Username can not be shorter than 5 characters.</div>
+        <div [hidden]="!username.hasError('required')">Username is required.</div>
+
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Password</span>
+        <input [formControl]="password" type="text" class="size1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+
+    </div>
+    <div [hidden]="username.valid|| username.untouched">
+        <div>Disable!!!</div>
+        <div [hidden]="!password.hasError('required')">Password is required.</div>
+
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid">Log In</button>
+
+</form>
+<p>Today is {{today | date:'fullDate'| uppercase}}</p>
+<!-- <p>{{test1}}</p> -->

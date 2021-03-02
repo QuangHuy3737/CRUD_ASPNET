@@ -1,0 +1,32 @@
+<h2>User Detail</h2>
+<h3>
+    <i>FormBuilder</i>
+</h3>
+<form [formGroup]="userFormGroup">
+    <div class="form-group">
+        <label class="center-block">Name:
+            <input class="form-control" formControlName="name">
+        </label>
+        <label class="center-block">Name:
+            <input class="form-control" formControlName="name">
+        </label>
+        <label class="center-block">Email:
+            <input class="form-control" formControlName="email">
+        </label>
+        <div formGroupName="addresses" class="well well-lg">
+            <h4>User's addresses</h4>
+            <div class="form-group">
+                <label class="center-block">Street:
+                    <input class= "form-control" formControlName="street">
+                </label>
+                <label class="center-block">City:
+                    <input class= "form-control" formControlName="street">
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
